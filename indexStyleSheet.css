@@ -1,0 +1,22 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+nav{
+    background-color: black;
+    position: fixed;
+    height: 10vh;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+
+}
+
+.leftSideNav{
+    font-family: "Permanent Marker", cursive;
+    font-optical-sizing: auto;
+    color: white;
+    padding-left: 7.5vw;
+    font-size:30px
+}
