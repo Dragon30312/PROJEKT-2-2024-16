@@ -1,20 +1,6 @@
 document.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
-    const part2Content1 = document.getElementById('part2Content1');
-    const part2Content2 = document.getElementById('part2Content2');
-    const part2Content3 = document.getElementById('part2Content3');
-    const images = [
-        document.getElementById('part1Image1'),
-        document.getElementById('part1Image2'),
-        document.getElementById('part1Image3'),
-        document.getElementById('part1Image4'),
-        document.getElementById('part1Image5'),
-        document.getElementById('part1Image6'),
-    ];
-    const imagePart3 =  document.getElementById('part3ContentRightId');
-
     let scrolled = window.scrollY;
-    let parallax = scrolled * -0.5;
 
 
     if (scrolled === 0) {
@@ -29,29 +15,6 @@ document.addEventListener('scroll', () => {
     }
 
 
-    if (scrolled >= 450) {
-        part2Content1.classList.remove('hidden2');
-        part2Content1.classList.add('show');
-        part2Content2.classList.remove('hidden2');
-        part2Content2.classList.add('show');
-        part2Content3.classList.remove('hidden2');
-        part2Content3.classList.add('show');
-    } else {
-        part2Content1.classList.add('hidden2');
-        part2Content1.classList.remove('show');
-        part2Content2.classList.add('hidden2');
-        part2Content2.classList.remove('show');
-        part2Content3.classList.add('hidden2');
-        part2Content3.classList.remove('show');
-    }
-
-    images.forEach((image, index) => {
-        if (image) {
-            image.style.transform = 'translateY(' + parallax * (1 - index * 0.1) + 'px)';
-        }
-    });
-
-    imagePart3.style.transform = 'translateY(' + -1*(parallax *  0.1)+ 'px)';
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -97,9 +60,43 @@ const observer = new IntersectionObserver((entries) =>{
 
 
 const hiddenItems = document.querySelectorAll('.hidden');
-const hiddenFromLeftItems = document.querySelectorAll('.hiddenFromLeft');
+const hiddenFromLeftItems1 = document.querySelectorAll('.hiddenFromLeft1')
+const hiddenFromLeftItems2 = document.querySelectorAll('.hiddenFromLeft2');
+const hiddenFromLeftItems3 = document.querySelectorAll('.hiddenFromLeft3');
 const hiddenStaticItems = document.querySelectorAll('.hiddenStatic');
 hiddenItems.forEach((el) => observer.observe(el));
-hiddenFromLeftItems.forEach((el) => observer.observe(el));
+hiddenFromLeftItems1.forEach((el) => observer.observe(el));
+hiddenFromLeftItems2.forEach((el) => observer.observe(el));
+hiddenFromLeftItems3.forEach((el) => observer.observe(el));
 hiddenStaticItems.forEach((el) => observer.observe(el));
 
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.part6ContentCard');
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            // Remove active class from all cards
+            cards.forEach(c => c.classList.remove('active'));
+            // Add active class to the clicked card
+            card.classList.add('active');
+        });
+
+        card.addEventListener('mouseover', () => {
+            // Add gray background to all other cards
+            cards.forEach(c => {
+                if (c !== card) {
+                    c.style.color = 'var(--lightgray-color)';
+                }
+            });
+        });
+
+        card.addEventListener('mouseout', () => {
+            // Remove gray background from all other cards
+            cards.forEach(c => {
+                if (c !== card) {
+                    c.style.color = 'var(--white-color)';
+                }
+            });
+        });
+    });
+});

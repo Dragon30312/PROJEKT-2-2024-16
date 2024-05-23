@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href=IDEStylesSheet.css>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="scrolledNone">
+    <div class="leftSideNav">
+        <a href="index.html"class="leftSideNavLogo">CodeVerse</a>
+        <div class="hamburgerMenu" id="hamburgerMenu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="leftSideNavOptions" id="leftSideNavOptions">
+            <a class="leftSideNavOption">Landings</a>
+            <a href="IDE.html" class="leftSideNavOption">CodeEditor</a>
+            <a href="aboutMe.html" class="leftSideNavOption">LearnMore</a>
+            <a href="pricing.html" class="leftSideNavOption">Pricing</a>
+            <a class="leftSideNavOption">Docs</a>
+        </div>
+
+    </div>
+    <div class="rightSideNavWrapper">
+        <div class="rightSideNav">
+            <a class="button1" href="#">Buy Now</a>
+            <a class="button2" href="#">Buy</a>
+        </div>
+        <img src="images/symbols/moon.png" id="icon1">
+        <img src="images/symbols/sun.png" id="icon2">
+    </div>
+
+</nav>
+
+
+<div class="part1">
+    <div class="part1Title"> Intruducing Our Inovative Code Editor</div>
+</div>
+
+<div class="part2">
+    <div class="part2ContentWrapper">
+        <div class="part2Left">
+            <label>HTML</label>
+            <textarea id="html-code" class="editor"  onkeyup="run()"></textarea>
+
+            <label>CSS</label>
+            <textarea id="css-code" class="editor" onkeyup="run()"></textarea>
+
+            <label>JavaScript</label>
+            <textarea id="js-code" class="editor" onkeyup="run()"></textarea>
+        </div>
+        <div class="part2Right">
+            <iframe id="output"></iframe>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footerAddr">
+        <h1 class="leftSideNavLogo">CodeVerse</h1>
+    </div>
+
+    <ul class="footerNav">
+        <li class="navItem">
+            <h2 class="navTitle">Media</h2>
+
+            <ul class="navUl">
+                <li>
+                    <a href="#">Online</a>
+                </li>
+
+                <li>
+                    <a href="#">Print</a>
+                </li>
+
+                <li>
+                    <a href="#">Alternative Ads</a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="navItem navItemExtra">
+            <h2 class="navTitle">Technology</h2>
+
+            <ul class="navUl navUlExtra">
+                <li>
+                    <a href="#">Hardware Design</a>
+                </li>
+
+                <li>
+                    <a href="#">Software Design</a>
+                </li>
+
+                <li>
+                    <a href="#">Digital Signage</a>
+                </li>
+
+                <li>
+                    <a href="#">Automation</a>
+                </li>
+
+                <li>
+                    <a href="#">Artificial Intelligence</a>
+                </li>
+
+                <li>
+                    <a href="#">IoT</a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="navItem">
+            <h2 class="navTitle">Legal</h2>
+
+            <ul class="navUl">
+                <li>
+                    <a href="#">Privacy Policy</a>
+                </li>
+
+                <li>
+                    <a href="#">Terms of Use</a>
+                </li>
+
+                <li>
+                    <a href="#">Sitemap</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="legal">
+        <p>&copy; 2024. All Rights Reserved.</p>
+
+        <div class="legalLinks">
+            <span>Made by Jakub Mazurek</span>
+        </div>
+    </div>
+</footer>
+
+<script src="IDEScript.js"></script>
+<script src="changeColor.js"></script>
+</body>
+</html>
