@@ -69,17 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     options.forEach(option => {
         option.addEventListener('click', () => {
-            // Remove active class from all options
             options.forEach(opt => opt.classList.remove('active'));
-            // Add active class to the clicked option
             option.classList.add('active');
-
-            // Get the target content section ID from the data-target attribute
             const targetId = option.getAttribute('data-target');
-
-            // Remove active class from all content sections
             contentSections.forEach(section => section.classList.remove('active'));
-            // Add active class to the target content section
             document.getElementById(targetId).classList.add('active');
         });
     });

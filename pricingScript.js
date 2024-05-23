@@ -32,17 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     options.forEach(option => {
         option.addEventListener('click', () => {
-            // Remove active class from all options
+
             options.forEach(opt => opt.classList.remove('active'));
-            // Add active class to the clicked option
             option.classList.add('active');
 
-            // Get the target content section ID from the data-target attribute
+
             const targetId = option.getAttribute('data-target');
 
-            // Remove active class from all content sections
             contentSections.forEach(section => section.classList.remove('active'));
-            // Add active class to the target content section
             document.getElementById(targetId).classList.add('active');
         });
     });
@@ -75,14 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
-            // Remove active class from all cards
             cards.forEach(c => c.classList.remove('active'));
-            // Add active class to the clicked card
             card.classList.add('active');
         });
 
         card.addEventListener('mouseover', () => {
-            // Add gray background to all other cards
             cards.forEach(c => {
                 if (c !== card) {
                     c.style.color = 'var(--lightgray-color)';
@@ -91,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         card.addEventListener('mouseout', () => {
-            // Remove gray background from all other cards
             cards.forEach(c => {
                 if (c !== card) {
                     c.style.color = 'var(--white-color)';
