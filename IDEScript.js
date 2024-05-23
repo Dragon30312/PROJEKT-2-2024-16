@@ -8,7 +8,7 @@ function run(){
     output.contentWindow.eval(jsCode);
 }
 
-//syntax highlighting nie udalo mi sie zainplementowac, zabraklo mi czasu :/
+//syntax highlighting nie udalo mi sie zainplementowac, zabraklo mi czasu :/. ale bylem blisko tym kodem:
 // function highlightCode(code, language) {
 //     if (language === "html") {
 //         return code.replace(/(&lt;\/?[\w\s="/.':;#-\/]+&gt;)/g, '<span class="keyword">$1</span>');
